@@ -74,7 +74,7 @@ async fn seek_to_position(
     file.read_to_string(&mut buffer)?;
 
     // Set the saved seek position to the current position within the file
-    *seek = file.seek(SeekFrom::Current(0))?;
+    *seek = file.stream_position()?;
 
     Ok(buffer)
 }

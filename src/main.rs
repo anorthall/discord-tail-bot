@@ -39,7 +39,7 @@ impl EventHandler for Handler {
                         Arc::clone(&last_seek),
                     )
                     .await;
-                    tokio::time::sleep(Duration::from_secs(5)).await;
+                    tokio::time::sleep(Duration::from_secs(settings.wait_time)).await;
                 }
             });
 
@@ -64,7 +64,7 @@ async fn main() {
         | GatewayIntents::DIRECT_MESSAGES
         | GatewayIntents::GUILDS
         | GatewayIntents::MESSAGE_CONTENT;
-    let mut client = Client::builder(&settings.discord_token.expose_secret(), intents)
+    let mut client = Client::builder(settings.discord_token.expose_secret(), intents)
         .event_handler(Handler {
             is_loop_running: AtomicBool::new(false),
             settings: Arc::new(settings),
