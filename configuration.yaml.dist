@@ -1,0 +1,4 @@
+discord_token: "enter your discord bot token here"
+log_file: "path/to/the/file/you/want/to/tail.txt"
+channel_id: 1234567891011121314
+pattern: "^\\[INFO] \\[\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3}] (.*)$"
