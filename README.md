@@ -14,6 +14,7 @@ log_file: "path/to/the/file/you/want/to/tail.txt"
 channel_id: 1234567891011121314
 pattern: "^\\[INFO] \\[\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2},\\d{3}] (.*)$"
 wait_time: 5
+status_message: logs
 ```
 
 `channel_id` is the id of the channel you want to send the messages to and
@@ -26,6 +27,8 @@ with another backslash, as shown in the example above.
 `wait_time` is the time, in seconds, to wait between checking the file for
 new lines. `discord_token` is the token of the discord bot you want to use
 to send the messages. `log_file` is the path to the file you want to tail.
+`status_message` is the message which will be displayed as the bot's status
+as 'Watching ...', so the example above would display 'Watching logs'.
 
 ## License
 This project is licensed under the GNU GPLv3 license. See the LICENSE file

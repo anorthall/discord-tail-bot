@@ -22,7 +22,8 @@ struct Handler {
 impl EventHandler for Handler {
     async fn cache_ready(&self, ctx: Context, _guilds: Vec<GuildId>) {
         log::info!("Cache built successfully!");
-        ctx.set_activity(Activity::watching("caves.app")).await;
+        ctx.set_activity(Activity::watching(&self.settings.status_message))
+            .await;
 
         let ctx = Arc::new(ctx);
         let last_seek = Arc::new(Mutex::new(0_u64));

@@ -7,6 +7,7 @@ pub struct Settings {
     pub channel_id: u64,
     pub pattern: String,
     pub wait_time: u64,
+    pub status_message: String,
 }
 
 pub fn get_configuration() -> Result<Settings, config::ConfigError> {
