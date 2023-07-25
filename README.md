@@ -23,5 +23,5 @@ content. Please note that any backslashes in the pattern must be escaped
 with another backslash, as shown in the example above.
 
 ## License
-This project is licensed under the MIT license. See the LICENSE file for more
-information.
+This project is licensed under the GNU GPLv3 license. See the LICENSE file
+for more information.
